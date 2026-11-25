@@ -35,7 +35,7 @@ from pydantic import BaseModel, Field
 
 from utils import mock_llm
 
-AGENT_VERSION = os.getenv("AGENT_VERSION", "v2")
+AGENT_VERSION = os.getenv("AGENT_VERSION", "v2").strip()
 LLM_MODEL = os.getenv("LLM_MODEL", mock_llm.DEFAULT_MODEL)
 PORT = int(os.getenv("PORT", "8000"))
 
